@@ -27,7 +27,8 @@ public class EmployeeController {
 
     @GetMapping(value="/getemp/{id}")
     public Optional<Employee> getEmp(@PathVariable Integer id){
-            return employeeRepository.findById(id);
+
+        return employeeRepository.findById(id);
     }
 
     @GetMapping(value="/getallemp/{name}/{city}")
@@ -37,3 +38,8 @@ public class EmployeeController {
     }
 
 }
+
+//OneToOne
+//OneToMany
+//ManyToOne
+//ManyToMany
