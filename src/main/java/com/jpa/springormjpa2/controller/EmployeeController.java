@@ -22,6 +22,7 @@ public class EmployeeController {
 
     @GetMapping(value="/getallemp")
     public List<Employee> getEmpList(){
+
         return employeeRepository.findAll();
     }
 

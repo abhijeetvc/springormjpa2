@@ -1,5 +1,6 @@
 package com.jpa.springormjpa2.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +21,7 @@ public class Employee {
 
     @ManyToOne
     @JoinColumn(name="dept_id")
+    @JsonBackReference
     private Department department;
 //    public Integer getAge() {
 //        return age;

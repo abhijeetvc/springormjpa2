@@ -1,5 +1,6 @@
 package com.jpa.springormjpa2.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +18,6 @@ public class Department {
     private String name;
 
     @OneToMany(mappedBy = "department")
+    @JsonManagedReference
     private Set<Employee> employeeSet;
 }
